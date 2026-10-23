@@ -8,7 +8,7 @@ updates:
   directory: "/"
   schedule:
     interval: "weekly"
-  open-pull-requests-limit: 15
+  open-pull-requests-limit: 0
   ignore:
   - dependency-name: com.thoughtworks.xstream:xstream
     versions:
@@ -23,11 +23,13 @@ updates:
    
 # For main webapp
 - package-ecosystem: "npm"
+  open-pull-requests-limit: 0
   directory: "main/webapp"
   schedule:
     interval: "weekly"
 # For github actions
 - package-ecosystem: "github-actions"
+  open-pull-requests-limit: 0
   directory: "/"
   schedule:
     interval: "monthly"
@@ -37,6 +39,7 @@ updates:
          - "*"
 # For cypress test_suite
 - package-ecosystem: "npm"
+  open-pull-requests-limit: 0
   directory: "main/tests/cypress"
   schedule:
     interval: "weekly"
